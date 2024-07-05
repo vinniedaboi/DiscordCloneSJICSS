@@ -1,79 +1,105 @@
+# Discord Clone
 
-# Discord Clone 👾
+This project is a Discord clone built for my school Computer Science club. It offers real-time messaging, voice and video communication, and user authentication, among other features.
 
-# App based on the tutorial off CodeWithAntonio
+## Tech Stack
 
-Youtube: https://www.youtube.com/@codewithantonio
+- **React**: A JavaScript library for building user interfaces.
+- **Next.js 13**: A React framework for production.
+- **Tailwind CSS**: A utility-first CSS framework.
+- **Socket.io**: Enables real-time, bidirectional, and event-based communication.
+- **Prisma**: Next-generation ORM for database management.
+- **MongoDB**: A NoSQL database for storing application data.
+- **Shadcn/ui**: A collection of modern UI components.
+- **LiveKit**: For scalable WebRTC and real-time communication.
+- **Uploadthing**: For handling file uploads.
+- **Clerk**: Authentication and user management.
 
-Tutorial: https://youtu.be/ZbX4Ok9YX94?si=-bhD-OD0ocicHohv
+## Features
 
-## Tech stack
+- **Real-time Messaging**: Instant communication using Socket.io.
+- **Voice and Video Chat**: Powered by LiveKit for seamless communication.
+- **User Authentication**: Managed by Clerk for secure login and registration.
+- **Modern UI**: Styled with Tailwind CSS and Shadcn/ui components.
+- **File Uploads**: Integrated with Uploadthing for handling file sharing.
 
-- **React**
-- **Next.js 13**
-- **Tailwindcss**
-- **Socket.io**
-- **Prisma**
-- **MongoDB**
-- **Shadcn/ui**
-- **LiveKit**
-- **Uploadthing**
-- **Clerk**
- 
-### Presentation
-https://youtu.be/U-aNRVWFkz0
+## Setup
 
-### Key Features:
+### Prerequisites
 
-- Real-time messaging using Socket.io
-- Send attachments as messages using UploadThing (images, pdfs)
-- Delete & Edit messages in real time for all users
-- Create Text, Audio and Video call Channels
-- 1:1 conversation between members
-- 1:1 video calls between members
-- Member management (Kick, Role change Guest / Moderator)
-- Unique invite link generation & full working invite system
-- Infinite loading for messages in batches of 10 (tanstack/query)
-- Server creation/customization
-- UI using TailwindCSS and ShadcnUI
-- Fully responsive UI
-- Light / Dark mode
-- Websocket fallback: Polling with alerts
-- ORM using Prisma
-- MongoDB database 
-- Authentication with Clerk
+- Node.js
+- npm or yarn
+- MongoDB (local or cloud instance)
+- Clerk account for authentication
 
-### Screenshots
+### Installation
 
-![App Screenshot](https://raw.githubusercontent.com/RiP3rQ/Discord-Clone-NextJs/main/screenshots/4.PNG)
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/yourusername/discord-clone.git
+    cd discord-clone
+    ```
 
-![App Screenshot](https://raw.githubusercontent.com/RiP3rQ/Discord-Clone-NextJs/main/screenshots/2.PNG)
+2. **Install dependencies**:
+    ```sh
+    npm install
+    ```
+    or
+    ```sh
+    yarn install
+    ```
 
-![App Screenshot](https://raw.githubusercontent.com/RiP3rQ/Discord-Clone-NextJs/main/screenshots/1.PNG)
+3. **Set up environment variables**:
+    - Create a `.env` file in the project root and add the following variables:
+        ```env
+       NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=example
+      CLERK_SECRET_KEY=example
+      NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+      NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+      
+      
+      NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+      NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+      
+      
+      DATABASE_URL="mongodb"
+      
+      UPLOADTHING_SECRET=example
+      UPLOADTHING_APP_ID=example
+      ```
 
-![App Screenshot](https://raw.githubusercontent.com/RiP3rQ/Discord-Clone-NextJs/main/screenshots/3.PNG)
+4. **Run the Prisma migrations**:
+    ```sh
+    npx prisma migrate dev
+    ```
 
+### Running the Application
 
-MIT License
+1. **Start the development server**:
+    ```sh
+    npm run dev
+    ```
+    or
+    ```sh
+    yarn dev
+    ```
 
-Copyright (c) 2023 Antonio Erdeljac
+2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## Deployment
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+You can deploy your Next.js application on platforms like Vercel, Netlify, or any other cloud provider that supports Node.js.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-# DiscordCloneSJICSS
-# DiscordCloneSJICSS
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an issue to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgements
+
+- The developers and maintainers of all the libraries and frameworks used in this project.
+- The members of my school CS club for their support and feedback.
+
