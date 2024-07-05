@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["uploadthing"]
+  "cSpell.words": [
+    "uploadthing"
+  ],
+  "WillLuke.nextjs.addTypesOnSave": true,
+  "WillLuke.nextjs.hasPrompted": true
 }
